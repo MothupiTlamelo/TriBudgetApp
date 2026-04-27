@@ -64,6 +64,33 @@ class AddExpense : AppCompatActivity() {
         setContentView(R.layout.activity_add_expense)
 
         val selectedCategory = intent.getStringExtra("SELECTED_CATEGORY") ?: ""
+        val extractedAmount = intent.getDoubleExtra("EXTRACTED_AMOUNT", -1.0)
+        val extractedDate = intent.getStringExtra("EXTRACTED_DATE")
+        val extractedDescription = intent.getStringExtra("EXTRACTED_DESCRIPTION")
+        val extractedPhotoPath = intent.getStringExtra("EXTRACTED_PHOTO_PATH")
+
+        if (extractedAmount > 0) {
+            etAmount.setText(extractedAmount.toString())
+            Toast.makeText(this, "Amount auto-filled from receipt!", Toast.LENGTH_SHORT).show()
+        }
+
+        if (!extractedDate.isNullOrEmpty()) {
+            selectedDate = extractedDate
+            btnSelectDate.text = selectedDate
+        }
+
+        if (!extractedDescription.isNullOrEmpty()) {
+            etDescription.setText(extractedDescription)
+        }
+
+        if (!extractedPhotoPath.isNullOrEmpty()) {
+            currentPhotoPath = extractedPhotoPath
+            val photoFile = File(currentPhotoPath)
+            if (photoFile.exists()) {
+                ivReceipt.setImageURI(Uri.fromFile(photoFile))
+                ivReceipt.visibility = ImageView.VISIBLE
+            }
+        }
 
         initializeViews()
         setupDatePicker()
@@ -223,6 +250,11 @@ class AddExpense : AppCompatActivity() {
         )
 
         AppData.addExpense(expense, this)
+
+        // Track for gamification
+        val gamificationManager = GamificationManager(this)
+        gamificationManager.recordExpenseEntry(hasPhoto = currentPhotoPath.isNotEmpty())
+
         Toast.makeText(this, "Expense saved successfully!", Toast.LENGTH_SHORT).show()
         finish()
     }

@@ -2,15 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Added these permissions -->
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- Camera permissions -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <!-- For Android 10 and below to save photos -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
-    <!-- Added queries for camera intent (Android 11+) -->
+    <!-- Queries for camera intent (Android 11+) -->
     <queries>
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE" />
@@ -23,10 +27,10 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TriBudget"
-        android:requestLegacyExternalStorage="true">
+        android:theme="@style/Theme.TriBudget">
 
         <!-- Main Activity (Launcher) -->
         <activity
@@ -65,7 +69,21 @@
             android:name=".expensesList"
             android:exported="false" />
 
-        <!-- Add FileProvider -->
+        <!-- New Feature Activities -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BadgesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReceiptScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SharedBudgetActivity"
+            android:exported="false" />
+
+        <!-- FileProvider for camera photos -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
