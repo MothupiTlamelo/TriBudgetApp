@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/welcomeMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Welcome to Tri-Budget"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp" />
+
+        <ImageView
+            android:id="@+id/welcomeLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/trilogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/welcomeLogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Every penny, intentional."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/welcomeSignup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="serif"
+        android:text="Sign up"
+        android:backgroundTint="#000000"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/welcomeLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif"
+        android:text="Log in"
+        android:backgroundTint="#000000"
+        android:textAllCaps="false" />
+
+</LinearLayout>
