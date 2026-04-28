@@ -1,257 +1,282 @@
+
 # TriBudgetApp
 
-Youtube link
-https://youtu.be/eTahLhGg-xU
+## YouTube Demonstration
+[Watch the Demo Video](https://youtu.be/eTahLhGg-xU)
 
-How the Tri-Budget App Works 
+---
 
-User Access 
+# Overview
 
-User creates an account and logs in using a username and password.  
+TriBudgetApp is a mobile budgeting application designed to help users manage their personal finances effectively. The application allows users to track expenses, monitor budgets, analyse spending habits, and improve financial discipline through gamification features.
 
-Each user has their own personal budgeting data.  
+The application supports offline functionality using local storage and includes advanced tools such as receipt scanning using OCR and predictive spending insights.
 
- 
+---
 
-Category System 
+# Features and Functionality
 
-User creates expense categories (e.g. Food, Transport, Rent).  
+## 1. User Access
+- Users create an account using a username and password
+- Each user has their own personal budgeting data
+- Secure login functionality allows users to access their financial records
 
-All expenses are grouped under these categories.  
+---
 
- 
+## 2. Category System
+Users can create expense categories such as:
+- Food
+- Transport
+- Rent
+- Entertainment
 
-Expense Recording 
+All expenses are grouped according to their selected category.
 
-User adds an expense entry.  
+---
 
-Each entry includes:  
+## 3. Expense Recording
+Users can add expense entries containing:
+- Expense amount
+- Date
+- Description
+- Selected category
+- Optional receipt/photo attachment
 
-Amount  
+Attached receipts can later be viewed from the expense history.
 
-Date  
+---
 
-Description  
+## 4. Budget Control
+Users are able to:
+- Set a monthly spending limit (maximum budget)
+- Set an optional minimum spending goal
+- Track spending progress against these limits
 
-Category  
+The application continuously monitors spending behaviour and provides visual feedback.
 
-Optionally, the user can attach a photo (e.g. receipt).  
+---
 
- 
+## 5. Viewing Expenses
+Users can:
+- View all recorded expenses
+- Filter expenses by date range
+- Open and view attached receipt images
+- Monitor historical spending activity
 
-Budget Control 
+---
 
-User sets:  
+## 6. Spending Analysis
+The application provides analytical tools including:
+- Total spending per category
+- Date-range filtering
+- Spending trend visualisation
+- Graphical analysis using charts
 
-Monthly spending limit (maximum)  
+Charts are implemented using MPAndroidChart.
 
-Optional minimum spending goal  
+---
 
-The app tracks spending against these limits.  
+## 7. Dashboard Overview
+The dashboard provides users with:
+- Progress bars
+- Budget summaries
+- Spending indicators
 
- 
+### Budget Colour Indicators
+- Green = Within budget
+- Amber = Warning level
+- Red = Overspending
 
-Viewing Expenses 
+---
 
-User can view all expenses for a selected time period.  
+## 8. Gamification Features
+To improve user engagement and financial discipline, the application includes gamification features.
 
-Expenses are shown in a list format.  
+### Users can earn badges for:
+- Logging expenses daily
+- Maintaining spending streaks
+- Staying under budget
+- Uploading receipts consistently
 
-Attached photos can be opened from each expense.  
+### Level System
+Users level up based on:
+- Consistency
+- Spending discipline
+- App activity
 
- 
+---
 
-Spending Analysis 
+## 9. Advanced Features
 
-The app shows total spending per category.  
+### OCR Receipt Scanning
+- Google ML Kit OCR is used to scan receipts
+- Expense information can be extracted automatically
 
-Users can filter data by date range.  
+### Predictive Insights
+- The app forecasts future spending patterns
+- Helps users anticipate overspending
 
-Graphs are used to show spending trends visually.  
+### Collaborative Budgeting
+- Shared budgeting allows multiple users to manage a budget together
 
- 
+### Dark Mode
+- Supports both manual and automatic dark mode switching
 
-Dashboard Overview 
+---
 
-Home screen displays progress bars and summaries.  
+## 10. Data Storage
+- All data is stored locally on the device
+- Uses Room Database / SQLite
+- Application supports offline functionality
+- Data remains permanently saved unless deleted by the user
 
-Color indicators show:  
+---
 
-Green = within budget  
+# Technologies Used
+- Kotlin
+- Android Studio
+- Room Database
+- SQLite
+- Google ML Kit
+- CameraX
+- MPAndroidChart
+- Coroutines
+- Gson
 
-Amber = warning  
+---
 
-Red = overspending  
+# Reference List
 
- 
+1. Android Developers (2024) *Pickers: DatePicker and TimePicker*. Available at: https://developer.android.com/develop/ui/views/components/pickers (Accessed: 28 April 2026).
 
-Gamification Features 
+2. Android Developers (2024) *Save data in a local database using Room*. Available at: https://developer.android.com/training/data-storage/room (Accessed: 28 April 2026).
 
-Users earn badges for activity and consistency.  
+3. Android Developers (2024) *View layout: RelativeLayout*. Available at: https://developer.android.com/develop/ui/views/layout/relative (Accessed: 28 April 2026).
 
-Examples:  
+4. Buddy, R.A. and B., M. (2025) *receipt_recognition 0.1.8*. Available at: https://pub.dev/packages/receipt_recognition (Accessed: 15 April 2026).
 
-Logging expenses daily (streaks)  
+5. Divay, W. (2024) *Gamifying financial literacy: a marketing strategy for a mobile app using gamification to improve user engagement*. Master’s thesis. Universidade Católica Portuguesa. Available at: https://repositorio.ucp.pt/entities/publication/8c07a241-6871-4d33-a81b-bb39e3257923 (Accessed: 25 April 2026).
 
-Staying under budget for a month  
+6. Dot Dot Fire (2024) *Money Wise Game has now been played by over half a million people*. MCV/Develop. Available at: https://mcvuk.com/business-news/from-the-industry-dot-dot-fires-money-wise-game-has-now-been-played-by-over-half-a-million-people-and-the-studio-is-expanding-for-its-follow-up/ (Accessed: 20 April 2026).
 
-Attaching receipts regularly  
+7. Google (2024) *androidx.camera.core*. Android Developers. Available at: https://developer.android.com/reference/androidx/camera/core/package-summary.html (Accessed: 17 April 2026).
 
-Users level up based on financial discipline.  
+8. Google (2025a) *androidx.camera.featurecombinationquery 1.5.2*. Android Developers. Available at: https://developer.android.com/jetpack/androidx/releases/camera-featurecombinationquery (Accessed: 17 April 2026).
 
- 
+9. Google (2025b) *androidx.camera.media3 1.0.0-alpha04*. Android Developers. Available at: https://developer.android.google.cn/jetpack/androidx/releases/camera-media3 (Accessed: 17 April 2026).
 
-Advanced Features 
+10. Google Codelabs (2023) *Android Room with a View - Kotlin*. Available at: https://developer.android.com/codelabs/android-room-with-a-view-kotlin (Accessed: 28 April 2026).
 
-Receipt scanning using OCR (automatic data extraction).  
+11. Google Developers (2024) *Easily add document scanning capability to your app with ML Kit Document Scanner API*. Android Developers Blog. Available at: https://android-developers.googleblog.com/2024/02/ml-kit-document-scanner-api.html (Accessed: 25 April 2026).
 
-Predictive insights forecast future spending.  
+12. Google Gson Team (2024) *google-gson: A Java library for JSON conversion*. Google Open Source. Available at: https://android.googlesource.com/platform/external/gson (Accessed: 25 April 2026).
 
-Collaborative budgeting allows shared budgets with others.  
+13. Google ML Kit (2024) *ML Kit release notes*. Google for Developers. Available at: https://developers.google.cn/ml-kit/release-notes (Accessed: 25 April 2026).
 
-Dark mode switches automatically or manually.  
+14. Google ML Kit Team (2026a) *Migrating to ML Kit for Android*. Google for Developers. Available at: https://developers.google.com/ml-kit/migration/android (Accessed: 20 April 2026).
 
- 
+15. Google ML Kit Team (2026b) *Recognize text in images with ML Kit on Android*. Google for Developers. Available at: https://developers.google.com/ml-kit/vision/text-recognition/v2/android (Accessed: 20 April 2026).
 
-Data Storage 
+16. Jahnavi, M. (2024a) *JitPack.io – MPAndroidChart repository*. JitPack. Available at: https://jitpack.io (Accessed: 20 April 2026).
 
-All data is stored locally on the device.  
+17. Jahnavi, M. (2024b) *MPAndroidChart Repository*. Available at: https://github.com/PhilJay/MPAndroidChart (Accessed: 28 April 2026).
 
-Uses Room Database or SQLite.  
+18. JetBrains (2024) *kotlinx.coroutines: Library support for Kotlin coroutines*. Google Open Source. Available at: https://android.googlesource.com/platform/external/kotlinx.coroutines (Accessed: 25 April 2026).
 
-Works offline and keeps data saved permanently. 
+19. Kotlin Documentation (2024) *Kotlin DSL for Gradle*. Available at: https://docs.gradle.org/current/userguide/kotlin_dsl.html (Accessed: 28 April 2026).
 
- 
+20. maqa544 (2024) *Receipt Scanner App – Android application utilizing Google ML Kit for OCR to scan and extract items and item prices from receipts*. GitHub. Available at: https://github.com/maqa544/android-receipt-ocr (Accessed: 17 April 2026).
 
- 
+21. Shindd9908 (2023) *Flutter_OCR_Bill_Scanner: A Flutter application designed for OCR scanning of bills*. GitHub. Available at: https://github.com/Shindd9908/Flutter_OCR_Bill_Scanner (Accessed: 17 April 2026).
 
-Reference List  
+22. Spendee (2026) *Spendee – The only app that gets your money into shape*. Elite AI Tools. Available at: https://eliteai.tools/tool/spendee (Accessed: 25 April 2026).
 
-Android Developers (2024) Pickers: DatePicker and TimePicker. Available at: https://developer.android.com/develop/ui/views/components/pickers (Accessed: 28 April 2026).  
+23. Stack Overflow (2024) *How to display an image from a URI in Android*. Available at: https://stackoverflow.com/questions/38352148/how-to-get-image-from-uri (Accessed: 28 April 2026).
 
-Android Developers (2024) Save data in a local database using Room. Available at: https://developer.android.com/training/data-storage/room (Accessed: 28 April 2026).  
+24. StriveCloud (2026) *5 ways Revolut creates the best banking app with gamification*. Available at: https://www.strivecloud.io/blog/gamification-examples-banking (Accessed: 25 April 2026).
 
-Android Developers (2024) View layout: RelativeLayout. Available at: https://developer.android.com/develop/ui/views/layout/relative (Accessed: 28 April 2026).  
+---
 
-Buddy, R.A. and B., M. (2025) receipt_recognition 0.1.8. Available at: https://pub.dev/packages/receipt_recognition (Accessed: 15 April 2026).  
+# AI Declaration 1
 
-Divay, W. (2024) Gamifying financial literacy: a marketing strategy for a mobile app using gamification to improve user engagement. Master’s thesis. Universidade Católica Portuguesa. Available at: https://repositorio.ucp.pt/entities/publication/8c07a241-6871-4d33-a81b-bb39e3257923 (Accessed: 25 April 2026).  
+I declare that the Artificial Intelligence (AI) tool Gemini was used as an aid in the development of the Tri-Budget application for the following purposes:
 
-Dot Dot Fire (2024) Money Wise Game has now been played by over half a million people. MCV/Develop. Available at: https://mcvuk.com/business-news/from-the-industry-dot-dot-fires-money-wise-game-has-now-been-played-by-over-half-a-million-people-and-the-studio-is-expanding-for-its-follow-up/ (Accessed: 20 April 2026).  
+## Logic Resolution
+AI was used to resolve various errors regarding:
+- User-selectable date filtering
+- Retrieval of stored photo URIs
 
-Google (2024) androidx.camera.core. Android Developers. Available at: https://developer.android.com/reference/androidx/camera/core/package-summary.html (Accessed: 17 April 2026).  
+## Build Configuration
+AI was used to resolve errors within the build.gradle.kts (app) file related to:
+- Dependency versioning
+- Plugin conflicts
 
-Google (2025a) androidx.camera.featurecombinationquery 1.5.2. Android Developers. Available at: https://developer.android.com/jetpack/androidx/releases/camera-featurecombinationquery (Accessed: 17 April 2026).  
+## Structural Integrity
+AI was used to resolve:
+- ID mismatches between Kotlin files and XML layouts
+- Context-related errors
 
-Google (2025b) androidx.camera.media3 1.0.0-alpha04. Android Developers. Available at: https://developer.android.google.cn/jetpack/androidx/releases/camera-media3 (Accessed: 17 April 2026).  
+## Code Maintenance
+AI was used to assist with:
+- Code indentation
+- Code structure
+- Technical comments
 
-Google Codelabs (2023) Android Room with a View - Kotlin. Available at: https://developer.android.com/codelabs/android-room-with-a-view-kotlin (Accessed: 28 April 2026).  
+## UI Styling
+AI was used to resolve styling and alignment issues using RelativeLayout to ensure a professional and consistent header format.
 
-Google Developers (2024) Easily add document scanning capability to your app with ML Kit Document Scanner API. Android Developers Blog. Available at: https://android-developers.googleblog.com/2024/02/ml-kit-document-scanner-api.html (Accessed: 25 April 2026).  
+All AI-assisted fixes were reviewed, tested, and understood before integration. The final application represents original work with AI serving as a support tool for debugging and error resolution.
 
-Google Gson Team (2024) google-gson: A Java library for JSON conversion. Google Open Source. Available at: https://android.googlesource.com/platform/external/gson (Accessed: 25 April 2026).  
+### Student Information
+- Name: Tinodiwanashe Dzoro
+- Student ID: ST10402234
+- Date: 28 April 2026
 
-Google ML Kit (2024) ML Kit release notes. Google for Developers. Available at: https://developers.google.cn/ml-kit/release-notes (Accessed: 25 April 2026).  
+## AI Reference
+Google (2026) *Gemini AI Assistant*. Google. Available at: https://gemini.google.com (Accessed: 28 April 2026).
 
-Google ML Kit Team (2026a) Migrating to ML Kit for Android. Google for Developers. Available at: https://developers.google.com/ml-kit/migration/android (Accessed: 20 April 2026).  
+---
 
-Google ML Kit Team (2026b) Recognize text in images with ML Kit on Android. Google for Developers. Available at: https://developers.google.com/ml-kit/vision/text-recognition/v2/android (Accessed: 20 April 2026).  
+# AI Declaration 2
 
-Jahnavi, M. (2024a) JitPack.io – MPAndroidChart repository. JitPack. Available at: https://jitpack.io (Accessed: 20 April 2026).  
+I declare that Artificial Intelligence (AI) tools ChatGPT and DeepSeek were used as assistance tools in the development of the Tri-Budget application for the following purposes:
 
-Jahnavi, M. (2024b) MPAndroidChart Repository. Available at: https://github.com/PhilJay/MPAndroidChart (Accessed: 28 April 2026).  
+## Camera and Photo Functionality
+Implementation assistance for:
+- CameraX
+- FileProvider configuration
+- Runtime permission handling
+- AddExpense.kt
+- ReceiptScannerActivity.kt
 
-JetBrains (2024) kotlinx.coroutines: Library support for Kotlin coroutines. Google Open Source. Available at: https://android.googlesource.com/platform/external/kotlinx.coroutines (Accessed: 25 April 2026).  
+## OCR Receipt Scanner
+Assistance with:
+- Google ML Kit Text Recognition integration
+- Regex pattern development for data extraction
+- Confidence scoring implementation
+- OCRProcessor.kt
 
-Kotlin Documentation (2024) Kotlin DSL for Gradle. Available at: https://docs.gradle.org/current/userguide/kotlin_dsl.html (Accessed: 28 April 2026).  
+## Code Error Resolution
+AI assistance was used for:
+- Null safety fixes
+- Import resolution
+- Type mismatch fixes
+- Locale warnings
+- KTX extension implementation
 
-maqa544 (2024) Receipt Scanner App – Android application utilizing Google ML Kit for OCR to scan and extract items and item prices from receipts. GitHub. Available at: https://github.com/maqa544/android-receipt-ocr (Accessed: 17 April 2026).  
+All AI-generated code was reviewed, tested, and understood before integration. The final application represents original work with AI serving as a development assistance tool.
 
-Shindd9908 (2023) Flutter_OCR_Bill_Scanner: A Flutter application designed for OCR scanning of bills. GitHub. Available at: https://github.com/Shindd9908/Flutter_OCR_Bill_Scanner (Accessed: 17 April 2026).  
+### Student Information
+- Name: Tapiwa Sango
+- Student ID: ST10276025
+- Date: 25 April 2026
 
-Spendee (2026) Spendee – The only app that gets your money into shape. Elite AI Tools. Available at: https://eliteai.tools/tool/spendee (Accessed: 25 April 2026).  
+## AI References
 
-Stack Overflow (2024) How to display an image from a URI in Android. Available at: https://stackoverflow.com/questions/38352148/how-to-get-image-from-uri (Accessed: 28 April 2026).  
+DeepSeek (2026) *DeepSeek AI Assistant*. DeepSeek. Available at: https://chat.deepseek.com (Accessed: 25 April 2026).
 
-StriveCloud (2026) 5 ways Revolut creates the best banking app with gamification. Available at: https://www.strivecloud.io/blog/gamification-examples-banking (Accessed: 25 April 2026). 
-
- 
-
- 
-
- 
-
-AI Declaration 
-
-I declare that the Artificial Intelligence (AI) tool Gemini was used as an aid in the development of the Tri-Budget application for the following purposes: 
-
-Logic Resolution: AI was used to resolve various errors regarding the implementation of user-selectable date filtering and the retrieval of stored photo URIs. 
-
-Build Configuration: AI was used to resolve various errors within the build.gradle.kts (app) file related to dependency versioning and plugin conflicts. 
-
-Structural Integrity: AI was used to resolve various ID mismatches between Kotlin files and XML layouts, as well as fixing Context-related errors. 
-
-Code Maintenance: AI was used to resolve various issues regarding code indentation, structure, and technical comments. 
-
-UI Styling: AI was used to resolve various styling and alignment errors, specifically using RelativeLayout to ensure a professional and consistent header format. 
-
-All AI-assisted fixes were reviewed, tested, and understood before integration. The final application represents my original work with AI serving as a tool for error resolution. 
-
-Name: Tinodiwanashe Dzoro Student ID: ST10402234 Date: 28 April 2026 
-
-Reference list for AI: 
-
-Google (2026) Gemini AI Assistant, Google. Available at: https://gemini.google.com (Accessed: 28 April 2026). 
-
- 
-
- 
-
- 
-
-AI Declaration 
-
-  
-
-I declare that Artificial Intelligence (AI) tools ChatGPT and DeepSeek were used as an aid in the development of the Tri-Budget application for the following purposes: 
-
-  
-
-· Camera/Photo functionality: Implementation of CameraX, FileProvider configuration, and runtime permission handling (AddExpense.kt, ReceiptScannerActivity.kt) 
-
-· OCR Receipt Scanner: Integration of Google ML Kit Text Recognition, regex pattern development for data extraction, and confidence scoring (OCRProcessor.kt) 
-
-· Code error resolution: Debugging and fixing of null safety issues, import resolution, type mismatches, locale warnings, and KTX extension implementations across all Kotlin files 
-
-  
-
-All AI-generated code was reviewed, tested, and understood before integration. The final application represents my original work with AI serving as an assistance tool. 
-
-  
-
-Name: Tapiwa Sango 
-
-  
-
-Student ID: ST10276025 
-
-  
-
-Date: 25 April 2026 
-
-  
-
-Reference list for ai: 
-
-  
-
-DeepSeek (2026) DeepSeek AI Assistant, DeepSeek. Available at: https://chat.deepseek.com (Accessed: 25 April 2026). 
-
-  
-
-OpenAI (2025) ChatGPT, OpenAI. Available at: https://chat.openai.com (Accessed: 25 April 2026). 
-
- 
+OpenAI (2025) *ChatGPT*. OpenAI. Available at: https://chat.openai.com (Accessed: 25 April 2026).
+```
 
  
 
