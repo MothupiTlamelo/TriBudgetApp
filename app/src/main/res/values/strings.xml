@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TriBudget</string>
+    <!-- Goals Screen Strings -->
+    <string name="back_button">Back</string>
+    <string name="no_min_goal_set">No minimum goal set</string>
+    <string name="no_max_goal_set">No maximum goal set</string>
+    <string name="goals_saved">Goals saved!</string>
+    <string name="on_track_message">You\'re on track with your budget!</string>
+    <string name="view_all_expenses">View All Expenses</string>
+
+    <!-- Alert Messages -->
+    <string name="minimum_goal_reached">✅ You\'ve reached your minimum goal!</string>
+    <string name="minimum_goal_warning">⚠️ You need to spend R%s more to reach your minimum goal</string>
+    <string name="maximum_goal_alert">🚨 ALERT! You\'ve exceeded your maximum budget by R%s</string>
+    <string name="maximum_goal_on_track">✅ Within budget! R%s remaining until R%s</string>
+
+    <!-- Toast Messages -->
+    <string name="need_to_spend_more">You need to spend R%s more to reach your minimum goal!</string>
+    <string name="exceeded_budget">You have exceeded your budget by R%s!</string>
+</resources>

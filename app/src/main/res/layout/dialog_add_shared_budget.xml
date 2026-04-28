@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#000000"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/trilogo"
+                android:contentDescription="App Logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Create Budget"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budget Details"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="#333333" />
+
+            <EditText
+                android:id="@+id/etBudgetName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Budget Name (e.g., Groceries)"
+                android:layout_marginBottom="12dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/etTotalBudget"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Total Budget Amount (ZAR)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="24dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite Members (one per line)"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="#333333" />
+
+            <EditText
+                android:id="@+id/etMembers"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="username1\nusername2"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
